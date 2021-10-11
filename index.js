@@ -43,34 +43,17 @@ const questions = [{
     },
     {
         type: 'checkbox',
-        name: 'liscense',
-        message: 'Liscense:',
+        name: 'license',
+        message: 'License:',
         choices: [
             "Apache",
             "GNU",
             "MIT"
         ]
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'What is your GitHub username?',
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email address?',
-    },
-    {
-        type: 'confirm',
-        name: 'init',
-        message: 'Would you like to create README.md?',
-        when: ({ init }) => init,
     }
 ];
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {};
 
 const writeToFile = fileContent => {
     return new Promise((resolve, reject) => {
@@ -82,20 +65,27 @@ const writeToFile = fileContent => {
 
             resolve({
                 ok: true,
-                message: 'README created!'
+                message: 'README created.'
             });
         });
     });
 };
 
-// TODO: Create a function to initialize app
-init() {
-    inquirer.prompt.questions
 
-        .then(promptProject)
-        .then(generateMarkdown)
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions)
+        .then(answers => {
+            return generateMarkdown(answers)
+        })
         .then(writeToFile)
-        .catch(err => { console.log(err); })
+        .catch(err => {
+            console.log(err);
+        })
+        // const data = inquirer.prompt(questions)
+        //     .then(generateMarkdown)
+        //     .then(writeToFile)
+        //     .catch(err => { console.log(err); })
 };
 
 // Function call to initialize app
