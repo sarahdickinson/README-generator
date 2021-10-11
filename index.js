@@ -89,11 +89,14 @@ const writeToFile = fileContent => {
 };
 
 // TODO: Create a function to initialize app
-init()
-    .then(promptProject)
-    .then(generateMarkdown)
-    .then(writeToFile)
-    .catch(err => { console.log(err); });
+init() {
+    inquirer.prompt.questions
+
+        .then(promptProject)
+        .then(generateMarkdown)
+        .then(writeToFile)
+        .catch(err => { console.log(err); })
+};
 
 // Function call to initialize app
 init();
