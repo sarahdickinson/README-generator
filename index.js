@@ -45,7 +45,11 @@ const questions = [{
         type: 'checkbox',
         name: 'liscense',
         message: 'Liscense:',
-        choices: []
+        choices: [
+            "Apache",
+            "GNU",
+            "MIT"
+        ]
     },
     {
         type: 'input',
