@@ -1,0 +1,23 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "README Generator is a command-line application that dynamically generates a professional README.md file from a user 's input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahdickinson/README-generator.git"
+  },
+  "keywords": [
+    "README",
+    "generator"
+  ],
+  "author": "sarahdickinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahdickinson/README-generator/issues"
+  },
+  "homepage": "https://github.com/sarahdickinson/README-generator#readme"
+}
