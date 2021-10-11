@@ -45,8 +45,7 @@ const fs = require('fs');
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    return `
-    # ${data.project}
+    return `# ${data.project}
 
     ## Table of Contents
     * [Description](#description)
@@ -76,7 +75,7 @@ function generateMarkdown(data) {
     Licensed under the [${data.license}] license.
 
     ## Questions
-    For additional information, visit my [Github](${data.github}) or reach out through [email](mailto::${data.email}).
+    For additional information, visit my [Github](https://github.com/${data.github}) or reach out through [email](<${data.email}>).
 `;
 }
 
